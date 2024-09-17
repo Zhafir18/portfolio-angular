@@ -1,0 +1,61 @@
+<div class="about">
+  <div class="about-title">
+    <h1>About Me</h1>
+  </div>
+  <div class="introduction">
+    <div class="description">
+      <h4>
+        Born in Jakarta on October 18, 2001, Undergraduate student majoring in
+        Computer Science at Binus University. Front End Developer with one year
+        experience working with HTML, CSS, JavaScript to create a good user
+        experience for customers. Accustomed to working together on projects,
+        finding solutions, and working under pressure.
+      </h4>
+    </div>
+    <div class="profile">
+      <img src="/assets/profile.png" alt="" />
+    </div>
+  </div>
+  <div class="skills">
+    <div class="certificate">
+      <button
+        class="prev"
+        (click)="prevSlide()"
+        [disabled]="currentSlide === 0"
+      >
+        &#10094;
+      </button>
+      <div class="certificate-container">
+        @for ( cert of certificates; track $index) {
+        <div class="certificate-card">
+          <div class="card-image">
+            <img [src]="cert.imgUrl" [alt]="cert.title" />
+          </div>
+          <div class="card-body">
+            <p>{{ cert.title }}</p>
+          </div>
+        </div>
+        }
+      </div>
+      <button
+        class="next"
+        (click)="nextSlide()"
+        [disabled]="currentSlide === certificates.length - 1"
+      >
+        &#10095;
+      </button>
+    </div>
+    <!-- <div class="skill">
+      @for (skill of skills; track $index) {
+      <div class="skill">
+        <label>{{ skill.name }}</label>
+        <div class="progress-bar-container">
+          <div class="progress-bar" [style.width]="skill.percentage + '%'">
+            {{ skill.percentage }}%
+          </div>
+        </div>
+      </div>
+      }
+    </div> -->
+  </div>
+</div>
