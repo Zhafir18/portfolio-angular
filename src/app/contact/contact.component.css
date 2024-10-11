@@ -12,7 +12,16 @@
 } */
 
 .contact-title {
+  justify-content: center;
+  display: flex;
   text-align: center;
+  align-items: center;
+}
+
+.contact-title img {
+  height: 70px;
+  margin-left: 5px;
+  margin-bottom: 40px;
 }
 
 .contact-me {
@@ -97,11 +106,27 @@ button:hover {
   align-items: center;
   padding: 20px;
   width: 200px;
-  background-color: #2980b9;
   border-radius: 10px;
   font-weight: 600;
   font-size: 20px;
   cursor: pointer;
+}
+
+.dark-theme {
+  background-color: #161616;
+  color: inherit;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+  .contact-me {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .soc {
+    width: 500px;
+    justify-content: space-between;
+  }
 }
 
 @media (max-width: 600px) {

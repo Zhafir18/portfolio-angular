@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
 
 @Component({
@@ -9,6 +9,8 @@ import { ReactiveFormsModule } from '@angular/forms';
   styleUrl: './contact.component.css',
 })
 export class ContactComponent {
+  darkTheme: boolean = false;
+
   contact = {
     name: '',
     email: '',

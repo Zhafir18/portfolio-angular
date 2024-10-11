@@ -1,9 +1,12 @@
 <div class="about">
   <div class="about-title">
     <h1>About Me</h1>
+    <div class="profile">
+      <img src="/assets/profile.png" alt="" />
+    </div>
   </div>
   <div class="introduction">
-    <div class="description">
+    <div class="description" data-aos="fade-down" data-aos-duration="3000">
       <h4>
         Born in Jakarta on October 18, 2001, Undergraduate student majoring in
         Computer Science at Binus University. Front End Developer with one year
@@ -12,12 +15,10 @@
         finding solutions, and working under pressure.
       </h4>
     </div>
-    <div class="profile">
-      <img src="/assets/profile.png" alt="" />
-    </div>
   </div>
   <div class="skills">
     <div class="certificate">
+      <h3>Certificate</h3>
       <button
         class="prev"
         (click)="prevSlide()"
@@ -27,7 +28,7 @@
       </button>
       <div class="certificate-container">
         @for ( cert of certificates; track $index) {
-        <div class="certificate-card">
+        <div class="certificate-card" data-aos="fade-in" data-aos-duration="3000">
           <div class="card-image">
             <img [src]="cert.imgUrl" [alt]="cert.title" />
           </div>
@@ -45,17 +46,34 @@
         &#10095;
       </button>
     </div>
-    <!-- <div class="skill">
-      @for (skill of skills; track $index) {
-      <div class="skill">
-        <label>{{ skill.name }}</label>
-        <div class="progress-bar-container">
-          <div class="progress-bar" [style.width]="skill.percentage + '%'">
-            {{ skill.percentage }}%
+    <div class="skill">
+      <h3>My Skills</h3>
+      <div class="skill-part">
+        <div class="front">
+          <h5>Front End</h5>
+          @for (skill of frontendSkills; track $index) {
+          <div class="skill">
+            <div class="one-skill" data-aos="fade-right" data-aos-duration="3000">
+              <label>{{ skill.name }}</label>
+              <img src="{{ skill.imgUrl }}" alt="{{ skill.name }}" />
+              <span class="tooltip">{{ skill.description }}</span>
+            </div>
           </div>
+          }
+        </div>
+        <div class="back">
+          <h5>Back End</h5>
+          @for (skill of backendSkills; track $index) {
+          <div class="skill">
+            <div class="one-skill" data-aos="fade-left" data-aos-duration="3000">
+              <label>{{ skill.name }}</label>
+              <img src="{{ skill.imgUrl }}" alt="{{ skill.name }}" />
+              <span class="tooltip">{{ skill.description }}</span>
+            </div>
+          </div>
+          }
         </div>
       </div>
-      }
-    </div> -->
+    </div>
   </div>
 </div>

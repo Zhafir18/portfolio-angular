@@ -10,7 +10,7 @@ nav {
 .nav-title span img {
   height: 30px;
 }
- 
+
 .nav-title a {
   text-decoration: none;
   color: inherit;
@@ -20,6 +20,7 @@ nav {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  margin-right: 100px;
 }
 
 .nav-menu a {
@@ -46,3 +47,16 @@ nav {
   background-color: #3c3c3c;
 }
 
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  nav {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  nav {
+    display: flex;
+    flex-direction: column;
+  }
+}

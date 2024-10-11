@@ -1,34 +1,43 @@
 .about {
   padding: 20px;
-  min-width: 1400px;
+  /* min-width: 1400px; */
 }
 
 .about-title {
   text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 
 .introduction {
-  display: flex;
-  justify-content: space-between;
+  /* display: flex;
+  justify-content: center;
   padding: 20px;
   align-items: baseline;
-  margin-bottom: 30px;
+  margin-bottom: 30px; */
+  text-align: center;
 }
 
 .description {
-  max-width: 600px;
+  max-width: 1400px;
 }
 
 .profile img {
-  height: 350px;
+  height: 70px;
+  margin-left: 5px;
+  margin-bottom: 40px;
   /* border-radius: 50%; */
 }
 
 .skills {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
+  min-height: 500px;
+  width: 1400px;
 }
 
 .certificate {
@@ -36,6 +45,10 @@
   width: 100%;
   max-width: 600px;
   overflow: hidden;
+}
+
+.certificate h3 {
+  text-align: center;
 }
 
 .certificate-container {
@@ -82,47 +95,129 @@ button:disabled {
 }
 
 .skill {
-  margin-bottom: 20px;
+  /* margin-bottom: 20px; */
   display: flex;
   flex-direction: column;
-  gap: 20;
+  justify-content: space-evenly;
+  min-width: 1400px;
+}
+
+.skill h3 {
+  text-align: center;
+}
+
+.skill-part {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.skill img {
+  height: 50px;
+  width: 50px;
+}
+
+.one-skill {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 10px;
+  border-radius: 8px;
+  position: relative;
+  overflow: hidden;
+}
+
+.tooltip {
+  visibility: hidden;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  text-align: center;
+  border-radius: 5px;
+  padding: 10px;
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
   justify-content: center;
-  min-width: 600px;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.one-skill:hover .tooltip {
+  visibility: visible;
+  opacity: 1;
+}
+
+.dark-theme {
+  background-color: rgb(10, 10, 10);
+  color: inherit;
+}
+
+.accordion {
+  display: flex;
+  flex-direction: column;
+}
+
+.accordion-item {
+  background-color: #141414;
+  color: inherit;
+  border: none;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.accordion-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.accordion-content {
+  display: none;
+}
+
+.accordion-content--opened {
+  display: block;
+  transition: display 0.3s ease-in;
 }
 
 .skill label {
   font-size: 18px;
-  font-weight: bold;
-  margin-bottom: 5px;
   display: block;
 }
-
-.progress-bar-container {
-  width: 100%;
-  background-color: #f3f3f3;
-  border-radius: 5px;
-  overflow: hidden;
-  height: 25px;
-}
-
-.progress-bar {
-  height: 100%;
-  background-color: #3498db;
-  text-align: center;
-  line-height: 25px;
-  color: white;
-  font-weight: bold;
-  transition: width 0.5s ease;
-}
-
 .skill:nth-child(2) .progress-bar {
-  background-color: #e74c3c; /* Java - Merah */
+  background-color: #e74c3c;
 }
 
 .skill:nth-child(3) .progress-bar {
-  background-color: #8e44ad; /* .NET - Ungu */
+  background-color: #8e44ad;
 }
 
 .skill:nth-child(4) .progress-bar {
-  background-color: #f39c12; /* Angular - Oranye */
+  background-color: #f39c12;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1500px) {
+  /* .about {
+    width: 70%;
+  } */
+
+  .introduction h4{
+    width: 50%;
+    margin: 0 auto;
+    padding: 20px;
+    font-size: 20px;
+  }
+
+  .skill {
+    min-width: 50%;
+  }
 }
