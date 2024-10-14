@@ -14,6 +14,7 @@ export class ProjectComponent {
       title: 'My Diet Kitchen',
       description: {
         desc1: 'Laravel',
+        desc2: 'MySql',
       },
     },
     {
@@ -21,6 +22,7 @@ export class ProjectComponent {
       title: 'Perbara',
       description: {
         desc1: 'Laravel',
+        desc2: 'MySql',
       },
     },
     {
@@ -29,6 +31,7 @@ export class ProjectComponent {
       description: {
         desc1: 'Laravel',
         desc2: 'HTML, CSS, JS',
+        desc3: 'MySql',
       },
     },
     {
@@ -36,6 +39,7 @@ export class ProjectComponent {
       title: 'Katbag',
       description: {
         desc1: 'Angular',
+        desc2: 'MySql',
       },
     },
   ];
